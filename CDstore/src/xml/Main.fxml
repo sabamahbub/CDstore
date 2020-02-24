@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="281.0" prefWidth="583.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="application.MainController">
+   <children>
+      <TabPane prefHeight="281.0" prefWidth="583.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Add New CD's">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="32.0" layoutY="12.0" prefHeight="32.0" prefWidth="87.0" text="Title:" />
+                        <Label layoutX="32.0" layoutY="45.0" prefHeight="32.0" prefWidth="87.0" text="Artists:" />
+                        <Label layoutX="32.0" layoutY="79.0" prefHeight="32.0" prefWidth="87.0" text="Year:" />
+                        <Label layoutX="32.0" layoutY="157.0" prefHeight="32.0" prefWidth="87.0" text="Song:" />
+                        <TextField fx:id="titleText" layoutX="94.0" layoutY="14.0" prefHeight="27.0" prefWidth="234.0" promptText="Title" />
+                        <TextField fx:id="artistText" layoutX="94.0" layoutY="47.0" prefHeight="27.0" prefWidth="234.0" promptText="Artist" />
+                        <TextField fx:id="yearText" layoutX="94.0" layoutY="81.0" prefHeight="27.0" prefWidth="234.0" promptText="Year" />
+                        <TextField fx:id="songText" layoutX="94.0" layoutY="159.0" prefHeight="27.0" prefWidth="234.0" promptText="Song" />
+                        <Button fx:id="makeCD" layoutX="238.0" layoutY="120.0" mnemonicParsing="false" onAction="#makeCDClick" prefHeight="27.0" prefWidth="90.0" text="Make CD" />
+                        <Button fx:id="addSong" layoutX="108.0" layoutY="202.0" mnemonicParsing="false" onAction="#addSongClick" prefHeight="27.0" prefWidth="90.0" text="Add Song" />
+                        <Button fx:id="saveCD" layoutX="229.0" layoutY="202.0" mnemonicParsing="false" onAction="#saveCDClickClick" prefHeight="27.0" prefWidth="90.0" text="Save CD" />
+                        <ListView fx:id="currentCDList" layoutX="349.0" layoutY="38.0" prefHeight="200.0" prefWidth="200.0" />
+                        <Label layoutX="416.0" layoutY="-5.0" prefHeight="39.0" prefWidth="125.0" text="CurrentCD:" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="CD's added this session">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ListView fx:id="CDSAdded" layoutX="19.0" layoutY="34.0" prefHeight="200.0" prefWidth="545.0" />
+                        <Label layoutX="240.0" layoutY="-3.0" prefHeight="34.0" prefWidth="103.0" text="CD's Added " />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
